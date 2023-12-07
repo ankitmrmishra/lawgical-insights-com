@@ -30,6 +30,7 @@ const About = () => {
         initial='hidden'
         whileInView='visible'
         transition={{ duration: 0.7, delay: 0.25 }}
+        viewport={{ once: true }}
         className='text-4xl lg:text-5xl text-White font-bold font-titleFont'
       >
         About Me
@@ -48,6 +49,7 @@ const About = () => {
             initial='hidden'
             whileInView='visible'
             transition={{ duration: 0.7, delay: 0.45 }}
+            viewport={{ once: true }}
           >
             Hey there! I am <span className='text-Green'> Mandvi Tripathi</span>
             , a vibrant law scholar and a High Court intern, dedicated to
@@ -63,6 +65,7 @@ const About = () => {
             initial='hidden'
             whileInView='visible'
             transition={{ duration: 0.7, delay: 0.65 }}
+            viewport={{ once: true }}
           >
             With an ardent passion for assisting others, I embark on this blog
             to impart my wisdom and experiences, enlightening you on your legal
@@ -78,6 +81,7 @@ const About = () => {
             initial='hidden'
             whileInView='visible'
             transition={{ duration: 0.7, delay: 0.85 }}
+            viewport={{ once: true }}
           >
             When I am not immersed in the captivating world of law, you can find
             me indulging in my hobbies of reading, writing, creating art, and
@@ -91,6 +95,7 @@ const About = () => {
             initial='hidden'
             whileInView='visible'
             transition={{ duration: 0.7, delay: 0.95 }}
+            viewport={{ once: true }}
           >
             So, join me on this exciting adventure as we navigate the intricate
             realms of law together!
@@ -103,6 +108,7 @@ const About = () => {
             }}
             initial='hidden'
             transition={{ duration: 0.7, delay: 1 }}
+            viewport={{ once: true }}
             className='skills-list grid grid-cols-2 gap-3 '
           >
             {skills &&

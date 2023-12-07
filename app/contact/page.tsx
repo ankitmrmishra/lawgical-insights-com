@@ -9,7 +9,7 @@ import {
 
 function page() {
   return (
-    <div className='  max-w-contentContainer mx-auto py-16 mdl:py-24 flex flex-col gap-5 lgl:gap-8 mdl:px-10 xl:px-4 p-7 sm:mt-9 '>
+    <div className='  max-w-contentContainer mx-auto pb-[10rem] mdl:py-24 flex flex-col gap-5 lgl:gap-8 mdl:px-10 xl:px-4 p-7 sm:mt-9 '>
       <div className='text-White text-center  '>
         <span className='lg:text-6xl text-4xl w-8 font-bold'>Get in touch</span>
         <h1>Break the virtual ice, reach out and lets start a conversation.</h1>

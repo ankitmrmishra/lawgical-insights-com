@@ -8,7 +8,7 @@
 }
 .image:hover {
   z-index: 100rem;
-  transform: translateY(1rem) translateX(-2rem);
+
   transition: 1s all;
   filter: grayscale(0);
 }

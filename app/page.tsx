@@ -46,24 +46,26 @@ export default async function IndexPage() {
         <ul className='lg:grid lg:grid-cols-3 lg:gap-16 gap-6 flex flex-col  '>
           {data.map((post) => (
             <li key={post._id} className=''>
-              <article className=' lg:w-96 lg:h-[25rem] rounded-lg bg-LightestNavy lg:justify-between lg:p-5 lg:align-middle lg:flex lg:flex-col p-5 '>
+              <article className=' lg:w-96 lg:h-[25rem] rounded-lg bg-LightNavy lg:justify-between lg:p-5 lg:align-middle lg:flex lg:flex-col p-5 '>
                 <div className=''>
                   <p className=' pb-3  rounded-sm p-1 bg-opacity-30 backdrop-blur-lg  drop-shadow-lg font-medium leading-6 text-teal-500'>
                     {new Date(post._createdAt).toISOString().split("T")[0]}
                   </p>
                 </div>
-                <div className='w-96 h-48 '>
+                <div className=' flex justify-center items-center align-middle'>
                   {post.content.some(
                     (item: { _type: string }) => item._type === "image"
                   ) && (
-                    <img
-                      className='lg:w-[21.5rem] w-[18rem] rounded-md h-48'
+                    <Image
+                      className='lg:w-[21.5rem] w-[18rem] rounded-md h-48  bg-black'
                       src={urlFor(
                         post.content.find(
                           (item: { _type: string }) => item._type === "image"
                         ).asset
                       ).url()}
                       alt='this main image'
+                      width={400}
+                      height={400}
                     />
                   )}
                 </div>
