@@ -95,3 +95,5 @@ export default async function IndexPage() {
     </main>
   );
 }
+
+export const revalidate = 60;
