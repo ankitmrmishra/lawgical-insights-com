@@ -1,6 +1,6 @@
 import { createClient } from "next-sanity";
 
-const projectId = "3xdg0q0d";
+const projectId = process.env.NEXT_PUBLIC_SANITY_PROJECT_ID;
 const dataset = "production";
 const apiVersion = "2023-01-01";
 
