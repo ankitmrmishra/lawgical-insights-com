@@ -12,3 +12,15 @@
   transition: 1s all;
   filter: grayscale(0);
 }
+@media (max-width: 767px) {
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .image {
+    width: 80%;
+    height: 80%;
+    margin-top: -13rem;
+  }
+}

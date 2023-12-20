@@ -26,7 +26,7 @@ export default async function SlugPage({
         <Image
           src={urlFor(value).url()}
           alt='Image'
-          className='rounded-lg w-80 h-96 lg:w-[60rem] lg:h-[40rem]  '
+          className='rounded-lg w-full h-full lg:w-[60rem] lg:h-[40rem] flex align-middle items-center justify-center  '
           width={800}
           height={800}
         />
@@ -54,7 +54,7 @@ export default async function SlugPage({
             </div>
           </div>
         </header>
-        <div className='flex flex-col justify-between pl-10 pr-10 pb-72 lg:justify-center  lg:items-center lg:p-40 lg:pt-[-10rem] '>
+        <div className='flex flex-col justify-center pl-10 pr-10 pb-72 lg:justify-center  lg:items-center lg:p-40 lg:pt-[-10rem] '>
           <PortableText
             value={data.content}
             components={PortableTextComponent}
