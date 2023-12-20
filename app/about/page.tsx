@@ -20,7 +20,7 @@ const About = () => {
   return (
     <section
       id='about'
-      className='lg:max-w-contentContainer flex flex-col align-middle justify-center mx-auto lg:py-10 mdl:py-24  gap-5 lgl:gap-8 mdl:px-10 xl:px-4 p-12 mt-4 lg:mb-11'
+      className='lg:max-w-contentContainer mb-8  flex flex-col align-middle justify-center mx-auto lg:py-10 mdl:py-24  gap-5 lgl:gap-8 mdl:px-10 xl:px-4 p-12 mt-4 lg:mb-11'
     >
       <motion.h1
         variants={{
@@ -36,7 +36,7 @@ const About = () => {
         About Me
       </motion.h1>
 
-      <div className=' flex flex-col lg:flex-row mx-auto lg:gap-32 gap-5'>
+      <div className=' flex justify-center items-center flex-col lg:flex-row mx-auto lg:gap-32 gap-5 h-full'>
         <div
           className=' lg:w-[50vw] lg:h-[70vh] flex flex-col lg:gap-5 gap-4 leading-8 font-bodyFont text-LightestSlate 
                 w-full xl:w-2/3   '
@@ -133,7 +133,7 @@ const About = () => {
           whileInView='visible'
           transition={{ duration: 0.7, delay: 0.5 }}
           viewport={{ once: true }}
-          className='wrapper  h-80 relative group  '
+          className='wrapper   h-80 relative group  '
         >
           <Image
             className='image object-contain shadow-[5px_5px_0px_0px_rgba(100,255,218)] lg:h-full lg:w-[400px] filter mix-blend-normal contrast-100'
