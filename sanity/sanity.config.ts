@@ -9,7 +9,7 @@ export default defineConfig({
   name: "default",
   title: "blog with nextjs",
 
-  projectId,
+  projectId: "3xdg0q0d",
   dataset: "production",
 
   plugins: [deskTool(), visionTool()],

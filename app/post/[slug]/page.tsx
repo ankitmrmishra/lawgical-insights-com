@@ -1,5 +1,5 @@
 import { Post } from "@/app/lib/interface";
-
+import { slugify } from "@/app/utils/helpers";
 import { client } from "@/app/lib/sanity";
 import { urlFor } from "@/app/lib/sanityImageUrl";
 import { PortableText } from "@portabletext/react";
@@ -22,20 +22,67 @@ export default async function SlugPage({
 
   const PortableTextComponent = {
     types: {
-      image: ({ value }: { value: any }) => (
+      image: ({ value }: any) => (
         <Image
           src={urlFor(value).url()}
-          alt='Image'
-          className='rounded-lg w-full h-full lg:w-[60rem] lg:h-[40rem] flex align-middle items-center justify-center  '
-          width={800}
-          height={800}
+          className='rounded-lg w-full h-full lg:w-full lg:h-[30rem] flex align-middle items-center justify-center  '
+          alt='Post'
+          width={500}
+          height={500}
         />
+      ),
+    },
+    block: {
+      h1: ({ value }: any) => (
+        <h1
+          id={slugify(value.children[0].text)}
+          className='text-4xl flex items-start justify-start  w-full font-bold mb-3'>
+          {value.children[0].text}
+        </h1>
+      ),
+      h2: ({ value }: any) => (
+        <h2
+          id={slugify(value.children[0].text)}
+          className='text-3xl flex items-start justify-start  w-full font-bold mb-3'>
+          {value.children[0].text}
+        </h2>
+      ),
+      h3: ({ value }: any) => (
+        <h3
+          id={slugify(value.children[0].text)}
+          className='text-2xl flex items-start justify-start  w-full font-bold mb-3'>
+          {value.children[0].text}
+        </h3>
+      ),
+      h4: ({ value }: any) => (
+        <h4
+          id={slugify(value.children[0].text)}
+          className='text-2xl flex items-start justify-start  w-full font-bold mb-3'>
+          {value.children[0].text}
+        </h4>
+      ),
+      h5: ({ value }: any) => (
+        <h5
+          id={slugify(value.children[0].text)}
+          className='text-2xl flex items-start justify-start  w-full font-bold mb-3'>
+          {value.children[0].text}
+        </h5>
+      ),
+      h6: ({ value }: any) => (
+        <h6
+          id={slugify(value.children[0].text)}
+          className='text-xl flex items-start justify-start  w-full font-bold mb-3'>
+          {value.children[0].text}
+        </h6>
       ),
     },
   };
 
+  
+
   return (
-    <main className={"notw"}>
+    <main
+      className={"notw flex justify-center align-middle items-center w-full "}>
       <div className='xl:divide-y xl:divide-gray-200 xl:dark:divide-gray-700'>
         <header className='pt-6 '>
           <div className='space-y-1 text-center'>
@@ -54,7 +101,7 @@ export default async function SlugPage({
             </div>
           </div>
         </header>
-        <div className='flex flex-col justify-center pl-10 pr-10 pb-72 lg:justify-center  lg:items-center lg:p-40 lg:pt-[-10rem] '>
+        <div className=' flex flex-col justify-center pl-10 pr-10 pb-72 lg:justify-center  lg:items-center lg:p-40 lg:pt-[-10rem]'>
           <PortableText
             value={data.content}
             components={PortableTextComponent}
