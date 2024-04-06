@@ -60,4 +60,5 @@ export const plugins = [
     cssSelector: ".notw", // or .notailwind or even [data-tailwind=false] - any valid CSS selector of your choice
     mode: "except matched",
   }),
+  require("@tailwindcss/typography"),
 ];

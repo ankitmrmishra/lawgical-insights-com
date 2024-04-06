@@ -37,7 +37,7 @@ const BlogCard = ({coverPhoto , title , content ,author , date}:{coverPhoto:stri
       viewport={{ once: false }}
       transition={{duration:0.7 , delay:0.85}}
     
-    className='flex flex-col align-middle  h-[450px] w-[300px] sm:w-[320px] bg-LightNavy p-3 rounded-3xl'>
+    className='flex flex-col align-middle  h-[500px] w-[300px] sm:w-[320px] bg-LightNavy p-3 rounded-3xl'>
 <img
  src={coverPhoto}
       width={350}
